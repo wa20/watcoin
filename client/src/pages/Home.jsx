@@ -5,10 +5,12 @@ const Home = () => {
 
     return (
          <div className='min-h-screen'>
-             <div className=''>
+             <div className='bg-gradient-to-r from-sky-500 to-indigo-500'>
              <Navbar/>
+             <Header/>
              </div>
 
+        Hello Crypto
 
         </div>
     )
