@@ -1,15 +1,18 @@
+// import React from 'react';
 import {Navbar, Header, Loader, Services, Transactions, Footer} from '../components/index'
+import '../../src/index.css'
+// import {HiMenuAlt4} from 'react-icons/hi'
 
 
 const Home = () => {
 
     return (
          <div className='min-h-screen'>
-             <div className='bg-gradient-to-r from-sky-500 to-indigo-500'>
+             <div className='gradient-bg-welcome p-5'>
              <Navbar/>
-             <Header/>
+            
              </div>
-
+ <Header/>
         Hello Crypto
 
         </div>
