@@ -39,22 +39,20 @@ const Navbar = () => {
             </ul>
 
             <div className="flex relative">
-                {toggleMenue
+                {toggleMenue 
                     ?
                     < MdClose fontSize={28} className="text-white md:hidden cursor-pointer" onClick={() => setToggleMenu(false)} />
-                    :
+                    :                 
                     < FiMenu fontSize={28} className="text-white md:hidden cursor-pointer" onClick={() => setToggleMenu(true)} />
-                    
-                    
-                    }
+                 }
 
 
                 {toggleMenue && (
 
-                    <ul fontSize={28} className="z=10 fixed top-0  -right-2 p-3 w-[70vw] h-screen shadow-2xl md-hidden list-none flex flex-col justify-start items-end rounded-none slider text-white animate-slide-in duration-750">
-                        <li className="text-xl w-full my-2">< MdClose onClick={() => setToggleMenu(false)} /></li>
+                    <ul  className="z=10 fixed top-0  -right-2 p-3 w-[70vw] h-screen shadow-2xl md-hidden list-none flex flex-col justify-start items-end rounded-none slider text-white animate-slide-in duration-750">
+                        <li  className="text-xl w-full my-2">< MdClose fontSize={28} onClick={() => setToggleMenu(false)} className="text-xl"/></li>
                         {["Market", "Wallets", "Tutorials", "Exchange"].map((item, index) => (
-                            <NavBarItem key={item + index} title={item} />
+                            <NavBarItem key={item + index} title={item} props="my-3 text-xl pr-3" />
                         ))}
                     </ul>
 
