@@ -4,7 +4,7 @@ import { MdClose } from 'react-icons/md'
 
 
 const NavBarItem = ({ title, props }) => (
-    <li className={`mx-4 cursor-pointer ${props}`}>
+    <li className={`mx-4 cursor-pointer  ${props}`}>
 
         {title}
 
@@ -32,9 +32,11 @@ const Navbar = () => {
                     <NavBarItem key={item + index} title={item} />
                 ))}
 
-                <li className=" rounded-full font-bold bg-[#5959f8] py-1 px-7 cursor-pointer hover:bg-[#7a7af5]">
-                    Login
-                </li>
+                <button type="button" className=" rounded-full font-bold bg-[#5959f8] py-1 px-7 cursor-pointer hover:bg-[#7a7af5]">
+                <div className="rounded-full font-bold bg-[#ccccfc]"></div>
+                <div>Login</div>
+                    
+                </button>
 
             </ul>
 
@@ -52,7 +54,7 @@ const Navbar = () => {
                     <ul  className="z=10 fixed top-0  -right-2 p-3 w-[70vw] h-screen shadow-2xl md-hidden list-none flex flex-col justify-start items-end rounded-none slider text-white animate-slide-in duration-750">
                         <li  className="text-xl w-full my-2">< MdClose fontSize={28} onClick={() => setToggleMenu(false)} className="text-xl"/></li>
                         {["Market", "Wallets", "Tutorials", "Exchange"].map((item, index) => (
-                            <NavBarItem key={item + index} title={item} props="my-3 text-xl pr-3" />
+                            <NavBarItem key={item + index} title={item} props="my-3 text-2xl pr-3" />
                         ))}
                     </ul>
 
